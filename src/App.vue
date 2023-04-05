@@ -1,15 +1,15 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+//import HelloWorld from './components/HelloWorld.vue'
+
+
+import NavLink from './components/NavLink.vue'
+import ProductStore from './components/ProductStore.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavLink, ProductStore
   }
 }
 </script>
@@ -24,3 +24,18 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+
+<template>
+  <div id="app"> 
+    <nav>
+        <NavLink url="/about" text="A propos" /> 
+        <NavLink url="/accueil" text="Accueil" /> 
+    </nav>
+
+    <p> Bienvenue, nous avons des </p>
+    <ProductStore nom="pomme" quantite="5" /> 
+    <ProductStore nom="vin" quantite="12" /> 
+
+  </div>
+</template>
