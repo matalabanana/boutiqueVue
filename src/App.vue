@@ -1,18 +1,13 @@
-<script>
+<template>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> | 
+    <router-link to="/produit/chocolat">Chocolat </router-link>
+  </nav>
+  
+  <router-view/>
 
-//import HelloWorld from './components/HelloWorld.vue'
-
-
-import NavLink from './components/NavLink.vue'
-import ProductStore from './components/ProductStore.vue'
-
-export default {
-  name: 'App',
-  components: {
-    NavLink, ProductStore
-  }
-}
-</script>
+</template>
 
 <style>
 #app {
@@ -21,21 +16,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
-
-
-<template>
-  <div id="app"> 
-    <nav>
-        <NavLink url="/about" text="A propos" /> 
-        <NavLink url="/accueil" text="Accueil" /> 
-    </nav>
-
-    <p> Bienvenue, nous avons des </p>
-    <ProductStore nom="pomme" quantite="5" /> 
-    <ProductStore nom="vin" quantite="12" /> 
-
-  </div>
-</template>
