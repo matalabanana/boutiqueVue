@@ -1,12 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductStore from '../components/ProductStore.vue'
+import ShoppingCard from '../components/ShoppingCard.vue'
 
 const routes = [
   { 
     path: '/produit/:nom', 
     name: 'productShow', 
     component: ProductStore,
+    props: true
+  }, 
+  { 
+    path: '/shoppingCard', 
+    name: 'shoppingCard', 
+    component: ShoppingCard,
     props: true
   }, 
   {

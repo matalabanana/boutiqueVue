@@ -6,12 +6,13 @@ export default {
   },
   computed: {
     stockValue() {
-      return this.quantite * 3.2; 
+      return this.quantite * 1; 
     }
   },
   props: {
     nom: { type: String, required: true }, 
-    id: { type: Number }
+    id: { type: Number }, 
+    price: { type:Number },
   },
   beforeMount() {
     //this.quantite = 42 ;
@@ -28,7 +29,8 @@ export default {
     <br>
     valeur du stock {{stockValue}} 
 
-    <button @click="quantite++">Ajoute une quantite</button>
+    <button @click="quantite++"> +1 </button>
+    <button @click="quantite+=3"> +3 </button>
   </div>
 
 </template>
