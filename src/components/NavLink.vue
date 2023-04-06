@@ -12,8 +12,9 @@ export default {
 
 <template>
   
+  
   <li>
   <a :href="url"> {{text}}  </a>  
   </li> 
-  <button @click="count++">You clicked me {{ count }} times.</button>
+  
 </template>
