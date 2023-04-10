@@ -1,27 +1,27 @@
 <template>
   <div> 
-    <nav>
-      <router-link to="/"> Vue défaut </router-link> |
-      <router-link to="/about">About</router-link> | 
-      <router-link to="/produit/chocolat">Chocolat </router-link> | 
-      <router-link to="/shoppingCard">Panier </router-link> | 
-      <router-link to="/catalogue">Catalogue </router-link>
+
+
+  <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Ma boutik</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+      <router-link class="nav-link" to="/"> Vue défaut </router-link>  
+      <router-link class="nav-link" to="/about">About</router-link>   
+      <router-link class="nav-link" to="/produit/chocolat">Chocolat </router-link>  
+      <router-link class="nav-link" to="/shoppingCard">Panier </router-link>   
+      <router-link class="nav-link" to="/catalogue">Catalogue </router-link>
+        </div></div> 
     </nav>
 
     <div class="alert alert-secondary">
     <router-view/>
     </div> 
-
-        <button class="btn btn-primary" 
-            data-bs-target="#collapseTarget" 
-            data-bs-toggle="collapse">
-            Bootstrap collapse
-        </button>
-        <div class="collapse py-2" id="collapseTarget">
-            This is the toggle-able content!
-        </div>
-
-
   </div>
 </template>
 
